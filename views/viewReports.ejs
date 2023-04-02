@@ -1,0 +1,11 @@
+<%- include("./partials/header") %>
+<div class="viewReports">
+	<h2>Here are other reports by other users: </h2>
+	<% posts.forEach(function(post){ %>
+	<h3>  <%= post.cathegory %> </h3>
+	<h3> Object: <%= post.content.substring(0, 400) %> </h3>
+	<h3> Location: <%= post.location %></h3>
+	
+	<% }) %>
+	</div>
+<%- include("./partials/footer") %>

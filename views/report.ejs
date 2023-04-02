@@ -1,0 +1,49 @@
+
+<%- include("./partials/header") %>
+	
+<div class="container">
+	<div class="h1-report">
+		<h1>Report about object</h1>
+	</div>
+
+	
+	<form class="form" action="/report" method="post">
+	<div class="form-group">
+		<label><strong>Add photo of object: </strong></label><br/>
+		<input type = "file" name = "upload" accept = "image/*" />
+	</div>
+
+		<fieldset>
+    <legend>Assign a category to the object:</legend>
+
+    <div>
+      <input type="radio" id="dangerous" name="nume"  value="dangerous"
+             checked>
+      <label for="dangerous"> Potentially dangerous object</label>
+    </div>
+
+    <div>
+      <input type="radio" id="lost" name="nume"  value="lost">
+      <label for="lost">Potentially lost object</label>
+    </div>
+
+    <div>
+      <input type="radio" id="assumption" name="nume"  value="assumption">
+      <label for="assumption">User assumption of what it might be:</label>
+   </div>
+   
+   </fieldset>
+  
+	<div>
+	<textarea id="text-area" class="form-control form-report middle-report" name="postOther" rows="4"></textarea><br>
+
+		<label for="location"><strong> Location: </strong></label><br/>
+		<input type="text" id="location" name="location" /> 
+	
+	</div>
+ <br>
+		<button class="btn btn-report btn-primary" type="submit" name="button">Publish</button>
+</form>
+</div>
+
+	<%- include("./partials/footer") %>
